@@ -1,0 +1,228 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  position: relative;
+  background-color:#fdeaeb ;
+}
+
+a {
+  color: #00B7FF;
+}
+nav{
+  background-color: #7b1fa2 ;
+  height: 40px;
+}
+.nav-wrapper{
+  line-height: 40px;
+}
+.container.main{
+  display: none;
+  position: relative;
+  padding: 15px 0;
+}
+.msg-write{
+  /*position: fixed;*/
+  /*bottom: 0;*/
+  /*width: 100%;*/
+}
+.msg-box{
+  width:85%!important;
+}
+.send-btn{
+  width: 14%;
+  margin-top: 7px;
+  border-radius: 20px;
+  padding: 0;
+}
+.brand-logo.center{
+  left:unset!important;
+  position: unset!important;
+}
+.logo-text{
+  float: left;
+  margin: 0 0 0 15px;
+}
+nav .brand-logo{
+  position: unset;
+   -webkit-transform: translateX(0%);
+   transform: translateX(0%);
+  font-size: 1.5rem;
+}
+.mantra{
+  margin: 0;
+}
+form.form{
+  position: fixed;
+  bottom:0;
+  width:75%;
+  background-color: #fdeaeb;
+}
+#main-area{
+
+}
+.single-msg{
+  margin-bottom: 10px;
+}
+ .single-msg.me .msg-text{
+    background-color: rgba(0,255,100,.1);
+}
+.single-msg .msg-icon{
+margin:0 10px;
+}
+.single-msg .msg-text{
+width:60%;
+  margin:0;
+}
+.single-msg:after,.single-msg.right:after, .msg-text:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.single-msg .card-content, .single-msg .card-action{
+  padding: 15px;
+}
+.single-msg .card-action .material-icons{
+  color:#bbb;
+}
+.file-upload{
+  transform: rotate(45deg);
+}
+
+.fixed-action-btn{
+  right: 35px!important;
+  bottom: 20px!important;
+}
+.image{
+  width: 40px!important;
+  height: 40px!important;
+  border-radius: 50%;
+}
+
+.btn-floating.btn-large{
+  width: 42px;
+  height:42px;
+}
+.btn-floating.btn-large i{
+  line-height: 42px;
+}
+
+#welcomebody .avatar-icon div{
+  width:33.3%;
+}
+#welcomebody #welcometext{
+  font-size: 35px;
+}
+
+.avatar-icon .col:first-child label img:before{
+  display:none;
+}
+
+
+#main-area > div:last-child{
+  margin-bottom: 70px;
+}
+
+#welcomebody{
+  content: '';
+  background:url('../images/homebgjpg.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.typingStatus{
+  color: #7b1fa2;
+  font-size: 14px;
+    position: fixed;
+    top: 5%;
+    width: 100%;
+    z-index: 2000;
+}
+
+
+
+
+/* media queries */
+@media screen and (max-width:870px){
+  .fixed-action-btn{
+    right: 70px!important;
+    bottom: 15px!important;
+  }
+  form.form{;
+    width:75%;
+  }
+  .msg-box{
+    width:80%!important;
+  }
+  .send-btn{
+    width: 19%;
+  }
+  #welcomebody .avatar-icon div{
+    width:33.3%;
+  }
+}
+@media screen and (max-width:767px) {
+  .fixed-action-btn{
+    right: 45px!important;
+    bottom: 15px!important;
+  }
+  .single-msg .msg-text{
+    width:80%;
+    margin:0;
+  }
+  #welcomebody .avatar-icon div{
+    width:33.3%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .fixed-action-btn{
+    right: 20px!important;
+    bottom: 15px!important;
+  }
+  form.form{;
+    width:75%;
+  }
+  .msg-box{
+    width:70%!important;
+  }
+  .send-btn{
+    width: 26%;
+  }
+  #welcomebody .avatar-icon div{
+    width:33.3%;
+  }
+}
+@media screen and (max-width:400px){
+  .fixed-action-btn{
+    right: 20px!important;
+    bottom: 15px!important;
+  }
+  form.form{;
+    width:85%;
+  }
+  .msg-box{
+    width:65%!important;
+  }
+  .send-btn{
+    width: 30%;
+  }
+  #welcomebody .avatar-icon div{
+    width:33.3%;
+  }
+}
+@media screen and (min-width:0px) and (max-width: 399px){
+  .fixed-action-btn{
+    right: 17px!important;
+    bottom: 15px!important;
+  }
+  form.form{;
+    width:75%;
+  }
+  .msg-box{
+    width:65%!important;
+  }
+  .send-btn{
+    width: 30%;
+  }
+  #welcomebody .avatar-icon div{
+    width:33.3%;
+  }
+}

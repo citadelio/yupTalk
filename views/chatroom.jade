@@ -1,0 +1,98 @@
+doctype html
+html
+    head
+        script(type='text/javascript', src='https://code.jquery.com/jquery-3.2.1.min.js')
+        meta(name="viewport", content="width=device-width initial-scale=1.0")
+        //title sayIT ...a note taking app
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        // Import materialize.css
+        link(type='text/css', rel='stylesheet', href='materialize/css/materialize.min.css', media='screen,projection')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        //script.
+        //    $(function(){
+        //        $('.modal').modal('open');
+        //    });
+    body
+        .navbar-fixed
+            nav
+                .container
+                    .nav-wrapper
+                        .logo-text
+                            a.brand-logo(href='#') sayIT
+                            small.mantra ...a chat app
+                        ul#nav-mobile.right.hide-on-med-and-down
+                            if(ou)
+                                li
+                                    a(href='#') #{ou.length} users online
+                            li
+                                a(href='/about') About
+                            li
+                                a(href='/help') Help
+                            li
+                                a#exitbtn(href='/') Exit
+        .row#welcomebody
+            .col.s10.m6.l6.offset-s1.offset-m3.offset-l3
+                .card
+                    form#welcomeForm
+                        .card-content
+                            span.card-title Welcome to sayIT!
+                            p
+                                | Pick a username and avatar to continue
+
+                                .input-field
+                                    input(type="text", id='welcometext')
+                                    label(for='welcometext') Enter your Username
+                            h5 Choose Avatar
+                            .avatar-icon
+                                .col.s4
+                                    input#avatarr1.with-gap(name='iconImage', type='radio', value='imagesM.png')
+                                    label(for="avatarr1")
+                                        img.responsive-img.circle(src="images/imagesM.png")
+                                .col.s4
+                                    input#avatarr2.with-gap(name='iconImage', type='radio', value='imagesF.png')
+                                    label(for="avatarr2")
+                                        img.responsive-img.circle(src="images/imagesF.png")
+                                .col.s4
+                                    input#avatarr3.with-gap(name='iconImage', type='radio', value='me.jpg')
+                                    label(for="avatarr3")
+                                        img.responsive-img.circle(src="images/me.jpg")
+                                .clearfix
+
+                        .card-action
+                            button#continuebtn.waves-effect.btn.purple.darken-2.right() Continue
+                            .clearfix
+        .container.main
+            .typingStatus.center 
+            section#main-area
+                //.single-msg.me.right
+                //    .msg-icon.right
+                //        img.image.responsive-img.circle(src="images/imagesF.png")
+                //    .msg-text.right Hello Mars! Its pretty sunny over here, how's your alien asses
+                //.clearfix
+            section
+                form.form#msg-form(action="")
+                    .input-field.msg-write
+                        input.left.msg-box(type="text" placeholder="Write a message..." id="msg-box" autocomplete="off")
+                        button.waves-effect.btn.purple.darken-2.right.send-btn#sendbtn Send
+                        script.
+                            var socket = io();
+            .fixed-action-btn
+                a.btn-floating.btn-large.red
+                    i.large.material-icons.file-upload attach_file
+                ul
+                    li
+                        a.btn-floating.blue
+                            i.material-icons attach_file
+                    li
+                        a.btn-floating.yellow.darken-1
+                            i.material-icons videocam
+                    li
+                        a.btn-floating.green
+                            i.material-icons audiotrack
+                    li
+                        a.btn-floating.red
+                            i.material-icons image                                
+        script(type='text/javascript', src='materialize/js/materialize.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js")
+        script(src="javascripts/script.js")
+
